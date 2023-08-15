@@ -1,8 +1,8 @@
-opencv-python
-Pillow
-torch
-torchvision
-tensorflow
+opencv-python==4.8.0.76
+Pillow==10.0.0
+torch==2.0.1
+torchvision==0.15.2
+tensorflow==2.13.0
 face-alignment==1.1.1
-dlib
-onnxruntime
+dlib==19.24.2
+onnxruntime==1.15.1
