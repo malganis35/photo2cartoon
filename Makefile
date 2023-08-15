@@ -3,6 +3,12 @@ clean:
 	@find . -name '__pycache__' |xargs rm -fr {} \;
 	@rm -fr build dist .eggs .pytest_cache
 
+clean_env:
+	@echo "--------------------------------------"
+	@echo "Delete pyenv virtual env cartoon"
+	@echo "--------------------------------------"
+	@pyenv virtualenv-delete cartoon
+
 # Development workflow
 
 setup_env:
