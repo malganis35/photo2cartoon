@@ -39,20 +39,26 @@ We also pre-process the data to a fixed pattern to help reduce the difficulty of
 
 ## Start
 
-### Requirements
-- python 3.6
-- pytorch 1.4
-- tensorflow-gpu 1.14
-- face-alignment
-- dlib
-- onnxruntime
+### Easy install on Linux
 
-### Clone
+1. Clone the project
+```
+git clone git@github.com:malganis35/photo2cartoon.git
+```
 
+2. Create a virtual environment ``cartoon`` with ``pyenv`` and activate it
 ```
-git clone https://github.com/minivision-ai/photo2cartoon.git
-cd ./photo2cartoon
+pyenv virtualenv system cartoon
+pyenv activate cartoon
 ```
+*Alternatively you can run ``pyenv local cartoon`` to automatically launch the environment when you are placed in this folder*
+
+3. Install the requirements packages
+```
+pip install -r requirements.txt 
+```
+
+4. Download the model as described below
 
 ### Download
 
