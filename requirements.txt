@@ -1,0 +1,8 @@
+opencv-python
+Pillow
+torch
+torchvision
+tensorflow
+face-alignment==1.1.1
+dlib
+onnxruntime
