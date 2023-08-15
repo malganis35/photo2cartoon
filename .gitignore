@@ -135,6 +135,7 @@ dmypy.json
 *.pb
 *.pth
 *.pt
+*.onnx
 
 results/
 photo2cartoon/
