@@ -5,12 +5,24 @@ clean:
 
 # Development workflow
 
+setup_env:
+	@echo "--------------------------------------"
+	@echo "Create pyenv virtual env"
+	@echo "--------------------------------------"
+	@pyenv virtualenv system cartoon
+	@pyenv activate cartoon
+	@pyenv local cartoon
+
 dev_install:
+	@echo "--------------------------------------"
 	@echo "Install Python necessary packages"
+	@echo "--------------------------------------"
 	@pip install -r requirements.txt 
 
 download_models:
+	@echo "--------------------------------------"
 	@echo "Download necessary models"
+	@echo "--------------------------------------"
 	@echo "Put the pre-trained photo2cartoon model photo2cartoon_weights.pt into models folder (update on may 4, 2020)"
 	@wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1MILr0SBjH-qln9EdV5J98DFaWkhSMeJJ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1MILr0SBjH-qln9EdV5J98DFaWkhSMeJJ" -O ./models/photo2cartoon_weights.pt && rm -rf /tmp/cookies.txt
 	@echo "Place the head segmentation model seg_model_384.pb in utils folder"
