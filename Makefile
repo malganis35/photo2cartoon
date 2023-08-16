@@ -59,7 +59,7 @@ build: ##@main >> build the virtual environment with an ipykernel for jupyter an
 	@echo ""
 	@echo "$(ccso)--> Build $(ccend)"
 	$(MAKE) install
-	$(MAKE) ipykernel
+	# $(MAKE) ipykernel ## to be debug
 
 clean-env: ##@setup >> remove all environment and build files
 	@echo ""
@@ -84,7 +84,7 @@ ipykernel: venv ##@setup >> install a Jupyter iPython kernel using our virtual e
 	@echo ""
 	@echo "$(ccso)--> Install ipykernel to be used by jupyter notebooks $(ccend)"
 	$(PYTHON) -m pip install ipykernel jupyter jupyter_contrib_nbextensions
-	$(PYTHON) -m ipykernel install 
+	sudo $(PYTHON) -m ipykernel install 
 					--user 
 					--name=$(VENV) 
 					--display-name=$(JUPYTER_ENV_NAME)
