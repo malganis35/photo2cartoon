@@ -4,7 +4,7 @@
 
 # Photo to Cartoon
 
-[中文版](README.md) | English Version
+[中文版](README_CH.md) | English Version
 
 [Minivision](https://www.minivision.cn/)'s photo-to-cartoon translation project is opened source in this repo, you can try our WeChat mini program "AI Cartoon Show" via scanning the QR code below.
 
@@ -13,6 +13,8 @@
 </div>
 
 You can also try on this page: [https://ai.minivision.cn/#/coreability/cartoon](https://ai.minivision.cn/#/coreability/cartoon)
+
+Alternatively, we propose also a demonstration on Google Colab: https://colab.research.google.com/drive/1H20Xhsq1NBr2h_tKv6tiIuEZE236c_oH?usp=sharing
 
 **Updates**
 - `2021.12.2`: [Run this model on Replicate](https://beta.replicate.ai/hao-qiang/photo2cartoon).
