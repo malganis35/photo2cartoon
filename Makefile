@@ -78,7 +78,7 @@ $(VENV_DIR):
 
 install: venv requirements.txt ##@setup >> update requirements.txt inside the virtual environment
 	@echo "$(ccso)--> Updating packages $(ccend)"
-	$(PYTHON) -m pip install -r requirements.txt
+	pip install -r requirements.txt
 
 ipykernel: venv ##@setup >> install a Jupyter iPython kernel using our virtual environment
 	@echo ""
