@@ -39,7 +39,39 @@ We also pre-process the data to a fixed pattern to help reduce the difficulty of
 
 ## Start
 
-### Easy install on Linux
+### Easy install on Linux (Automatic with Makefile)
+1. Clone the project
+```
+git clone git@github.com:malganis35/photo2cartoon.git
+```
+
+1.bis (optional) If you have not install pyenv, use:
+```
+make Linux
+```
+
+2. Build the project (environment, requirements, etc.)
+```
+make build
+```
+
+3. Download all the models in the right folders
+```
+make download-models
+```
+
+4. If you need to clean your environments:
+```
+make clean-env
+```
+
+5. If you need all the help and commands in the Makefile
+```
+make
+```
+
+
+### Easy install on Linux (Semi-Automatic)
 
 1. Clone the project
 ```
