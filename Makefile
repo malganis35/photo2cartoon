@@ -77,7 +77,7 @@ $(VENV_DIR):
 	pyenv virtualenv ${PYTHON_VERSION} ${VENV}
 	echo ${VENV} > .python-version
 
-install: venv requirements.txt ##@setup >> update requirements.txt inside the virtual environment
+install: requirements.txt ##@setup >> update requirements.txt inside the virtual environment
 	@echo "$(ccso)--> Updating packages $(ccend)"
 	pip install -r requirements.txt
 
