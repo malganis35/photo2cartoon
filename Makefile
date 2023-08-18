@@ -38,6 +38,7 @@ clean:
 	@rm -f */version.txt .coverage
 	@find . -name '__pycache__' |xargs rm -fr {} \;
 	@rm -fr build dist .eggs .pytest_cache
+	@rm -fr ./_tmp/
 
 Darwin: ## >> install pyenv for MacOS
 	brew update 
