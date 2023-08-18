@@ -105,14 +105,15 @@ with col2:
 def main():
     
     # Display a sidebar panel
-    st.sidebar.title("File List")
-    file_list = os.listdir("_tmp/")
-    selected_file = st.sidebar.selectbox("Select an image file:", file_list)
-    selected_file_path = os.path.join("_tmp", selected_file)
+    st.sidebar.title("Image history of the session")
+    if os.path.isdir("_tmp/"):
+        file_list = os.listdir("_tmp/")
+        selected_file = st.sidebar.selectbox("Select an image file:", file_list)
+        selected_file_path = os.path.join("_tmp", selected_file)
 
-    # Display the selected image from the sidebar
-    selected_image = cv2.imread(selected_file_path, cv2.IMREAD_COLOR)
-    st.sidebar.image(selected_image, caption=selected_file, use_column_width=True, clamp=True, channels="BGR")
+        # Display the selected image from the sidebar
+        selected_image = cv2.imread(selected_file_path, cv2.IMREAD_COLOR)
+        st.sidebar.image(selected_image, caption=selected_file, use_column_width=True, clamp=True, channels="BGR")
 
     # Load an image from local drive
     uploaded_image = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
@@ -142,7 +143,7 @@ def main():
                 # Display transformed image on the right
                 col2.subheader("Transformed Image")
                 col2.image(transformed_image, width=500, clamp=True, channels="BGR")
-                cv2.imwrite("tmp_result.png", transformed_image)
+                cv2.imwrite("./tmp/tmp_result.png", transformed_image)
                 
                 # Add a button to save the transformed image
                 if st.button("Save Transformed Image"):
