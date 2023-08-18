@@ -6,3 +6,4 @@ tensorflow==2.13.0
 face-alignment==1.1.1
 dlib==19.24.2
 onnxruntime==1.15.1
+streamlit
