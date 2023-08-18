@@ -95,6 +95,10 @@ jupyter: venv ##@main >> start a jupyter notebook
 	@"$(ccso)--> Running jupyter notebook on port $(JUPYTER_PORT) $(ccend)"
 	jupyter notebook --port $(JUPYTER_PORT)
 
+run: ##@main >> run the web app for demo
+	@echo "$(ccso)--> Run the streamlit application $(ccend)"
+	streamlit run ./app/manga_transformer_app.py
+
 ## --------------------------------------------------------------------------------------------------------------------
 # Specific make for the project
 ## --------------------------------------------------------------------------------------------------------------------
